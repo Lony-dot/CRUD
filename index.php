@@ -25,28 +25,32 @@
                 <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="novo-usuario.php">Novo Usuário</a>
+                <a class="nav-link" href="?page=novo">Novo Usuário</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="listar-usuario.php">Listar usuários</a>
+                <a class="nav-link" href="?page=listar">Listar usuários</a>
             </ul>
             </div>
         </div>
-        </nav>
+    </nav>
 
         <div class="container">
             <div class="row">
                 <div class="col mt-5">
                 <?php
-                    switch(@$_REQUEST["page"]){
+                    include("config.php"); //arquivo de conexão com o banco de dados
+                    switch(@$_REQUEST["page"]){ //requisição da página 
                         case "novo":
                         include("novo-usuario.php");
                         break;
                         case "listar":
                             include("listar-usuario.php");     
                         break;
+                        case "salvar":
+                            include("salvar-usuario.php");
+                        break;
                         default:
-                            echo "Bem vindos!";
+                            print "<h1>Bem vindos!</h1>";
                     }
                 ?>
                 </div>
@@ -54,5 +58,6 @@
         </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+  
+</body>
 </html>
