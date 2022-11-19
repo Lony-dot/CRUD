@@ -13,6 +13,10 @@
         <input type="text" name="nome" value="<?php print $row->nome; ?>" class="form-control">
     </div>
     <div class="mb-3">
+        <label>CPF</label>  
+        <input type="text" name="cpf" value="<?php print $row->cpf; ?>" class="form-control" required>
+    </div>
+    <div class="mb-3">
         <label>E-mail</label>  
         <input type="email" name="email" value="<?php print $row->email; ?>" class="form-control">
     </div>
