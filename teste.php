@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Como formatar campos do Formulário / Máscara - jQuery Mask</title>
     <meta name="description" content="Aprenda a formatar máscaras de forma muito simples e rápida usando a biblioteca jQuery Mask">
     <meta name="author" content="Prof. Anderson Luiz de Oliveira - https://www.blogson.com.br/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +22,6 @@
             <div class="form-group col-md-4">
                 <label>CPF</label>
                 <input type="text" class="form-control" onkeypress="$(this).mask('000.000.000-00');">
-            </div>
-            <div class="form-group col-md-4">
-                <label>CNPJ</label>
-                <input type="text" class="form-control">
             </div>
             <div class="form-group col-md-4">
                 <label>CEP</label>

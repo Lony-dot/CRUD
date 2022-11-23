@@ -47,7 +47,7 @@ $alertaCadastro = strlen($alertaCadastro) ? '<div class="alert alert-danger"'.$a
                     </div>
 
                     <div class="form-group">
-                        <label>Nome</label>
+                        <label>Email</label>
                         <input type="email" placeholder="E-mail" name="email" class="form-control" required>
                     </div>
 

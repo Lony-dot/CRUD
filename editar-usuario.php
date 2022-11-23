@@ -15,6 +15,7 @@
     <div class="mb-3">
         <label>CPF</label>  
         <input type="text" name="cpf" value="<?php print $row->cpf; ?>" class="form-control" required>
+        <!-- Required foi usado aqui de forma que obrigue o usuário a digitar a seu CPF -->
     </div>
     <div class="mb-3">
         <label>E-mail</label>  

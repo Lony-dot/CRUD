@@ -14,7 +14,6 @@
         print "<th>#</th>";
         print "<th>Nome</th>";
         print "<th>CPF</th>";
-        print "<th>CNPJ</th>";
         print "<th>E-mail</th>";
         print "<th>Data de Nascimento</th>";
         print "<th>Ações</th>";
@@ -26,7 +25,6 @@
             print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
             print "<td>".$row->cpf."</td>";
-            print "<td>".$row->cnpj."</td>";
             print "<td>".$row->email."</td>";
             print "<td>".$row->data_nasc."</td>";
             print "<td>

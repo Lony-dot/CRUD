@@ -8,11 +8,7 @@
     </div>
     <div class="mb-3"> 
         <label>CPF</label>
-        <input type="text" placeholder="000.000.000-00" class="form-control" onkeypress="$(this).mask('000.000.000-00');">
-    </div>
-    <div class="mb-3"> 
-        <label>CNPJ</label>
-        <input type="text" placeholder="00.000.000/0000-00" class="form-control" onkeypress="$(this).mask('00.000.000/0000-00')">
+        <input type="text" placeholder="000.000.000-00"  minlength="14" maxlength="14" class="form-control" onkeypress="$(this).mask('000.000.000-00');">
     </div>
     <div class="mb-3">
         <label>E-mail</label>  
