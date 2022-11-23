@@ -37,7 +37,7 @@ $alertaCadastro = strlen($alertaCadastro) ? '<div class="alert alert-danger"'.$a
         
             <form method="post">
 
-                <h2>Cadastree-se</h2>
+                <h2>Cadastre-se</h2>
 
                 <?=$alertaCadastro?>
 
