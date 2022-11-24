@@ -41,11 +41,11 @@
         </div>
     </nav>
 
-        <div class="container">
+        <div class="container"> <!-- Ideal deixar dentro de um container para melhorar a visualização-->
             <div class="row">
                 <div class="col mt-5">
                 <?php
-                    include("config.php"); //arquivo de conexão com o banco de dados
+                    include("config.php"); //arquivo de conexão com o banco de dados, imprescindível ter ele aqui.
                     switch(@$_REQUEST["page"]){ //requisição da página 
                         case "novo":
                         include("novo-usuario.php");
