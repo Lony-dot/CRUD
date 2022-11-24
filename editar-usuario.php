@@ -12,6 +12,11 @@
         <label>Nome</label>
         <input type="text" name="nome" value="<?php print $row->nome; ?>" class="form-control">
     </div>
+    <div class="mb-3"> 
+        <label>Nome Mãe</label>
+        <input type="text" name="nome_mae" value="<?php print $row->nome_mae; ?>" class="form-control">
+    </div>
+
     <div class="mb-3">
         <label>CPF</label>  
         <input type="text" name="cpf" value="<?php print $row->cpf; ?>" class="form-control" required>

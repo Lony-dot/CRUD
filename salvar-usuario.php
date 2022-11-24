@@ -5,6 +5,7 @@
         case 'cadastrar':
 
         $nome = $_POST["nome"];
+        $nome_mae = $_POST["nome_mae"];
             $cpf = $_POST["cpf"];
             $email = $_POST["email"];
             $contato = $_POST["contato"];
@@ -12,7 +13,7 @@
             $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
-            $sql = "INSERT INTO usuarios (nome, cpf, email, contato, cep, senha, data_nasc) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$senha}', '{$data_nasc}')";        
+            $sql = "INSERT INTO usuarios (nome, nome_mae, cpf, email, contato, cep, senha, data_nasc) VALUES ('{$nome}', '{$nome_mae}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$senha}', '{$data_nasc}')";        
 
             $res = $conn->query($sql);
 
@@ -28,6 +29,7 @@
         
         case 'editar':
              $nome = $_POST["nome"];
+             $nome_mae = $_POST["nome_mae"];
              $cpf = $_POST["cpf"];
             $email = $_POST["contato"];
             $contato = $_POST["email"];
@@ -37,6 +39,7 @@
 
             $sql = "UPDATE usuarios SET 
             nome='{$nome}',
+            nome_mae='{$nome_mae}',
             cpf='{$cpf}',
             email='{$email}',
             contato='{$contato}',

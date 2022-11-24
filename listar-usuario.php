@@ -13,6 +13,7 @@
         print "<tr>";
         print "<th>#</th>";
         print "<th>Nome</th>";
+        print "<th>Nome Mãe</th>";
         print "<th>CPF</th>";
         print "<th>E-mail</th>";
         print "<th>Contato</th>";
@@ -26,6 +27,7 @@
             print "<tr>";
             print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
+            print "<td>".$row->nome_mae."</td>";
             print "<td>".$row->cpf."</td>";
             print "<td>".$row->email."</td>";
             print "<td>".$row->contato."</td>";

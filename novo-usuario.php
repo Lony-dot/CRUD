@@ -7,6 +7,11 @@
         <input type="text" placeholder="Nome Completo" name="nome" class="form-control" required>
     </div>
     <div class="mb-3"> 
+        <label>Nome Mãe</label>
+        <input type="text" placeholder="Nome Mãe" name="nome_mae" class="form-control" required>
+    </div>
+     
+    <div class="mb-3"> 
         <label>CPF</label>
         <input type="text" placeholder="000.000.000-00"  minlength="14" maxlength="14" class="form-control" onkeypress="$(this).mask('000.000.000-00');"  required>
     </div>
@@ -35,9 +40,9 @@
         <input type="date" placeholder="Data de nascimento" name="data_nasc" class="form-control"  required>
     </div>
     <div class="mb-3">
-        
+    <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+       
 </form>
 
 
