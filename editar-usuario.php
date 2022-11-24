@@ -24,8 +24,13 @@
 
     <div class="mb-3">
         <label>Contato</label>  
-        <input type="text"  name="contato" value="<?php print $row->contato; ?>" class="form-control" type="text" class="form-control" onkeypress="$(this).mask('(00) 00000-0009')" required>
+        <input type="text"  name="contato" value="<?php print $row->contato; ?>" type="text" class="form-control" onkeypress="$(this).mask('(00) 00000-0009')" required>
     </div>
+
+    <div class="mb-3">
+            <label>CEP</label>
+            <input type="text"  name="cep" value="<?php print $row->cep; ?>" class="form-control" onkeypress="$(this).mask('00.000-000')" required>
+     </div>
 
     <div class="mb-3">
         <label>Senha</label>  

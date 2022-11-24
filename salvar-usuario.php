@@ -8,10 +8,11 @@
             $cpf = $_POST["cpf"];
             $email = $_POST["email"];
             $contato = $_POST["contato"];
+            $cep = $_POST["cep"];
             $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
-            $sql = "INSERT INTO usuarios (nome, cpf, email, contato, senha, data_nasc) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$contato}', '{$senha}', '{$data_nasc}')";        
+            $sql = "INSERT INTO usuarios (nome, cpf, email, contato, cep, senha, data_nasc) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$senha}', '{$data_nasc}')";        
 
             $res = $conn->query($sql);
 
@@ -30,6 +31,7 @@
              $cpf = $_POST["cpf"];
             $email = $_POST["contato"];
             $contato = $_POST["email"];
+            $cep = $_POST["cep"];
             $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
@@ -38,6 +40,7 @@
             cpf='{$cpf}',
             email='{$email}',
             contato='{$contato}',
+            cep='{$cep}',
             senha='{$senha}',
             data_nasc='{$data_nasc}'
             WHERE

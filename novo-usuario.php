@@ -21,7 +21,10 @@
         <input type="text" placeholder="(00)00000-0000" name="contato" class="form-control" type="text" class="form-control" onkeypress="$(this).mask('(00) 00000-0009')" required>
     </div>
    
-
+    <div class="mb-3">
+            <label>CEP</label>
+            <input type="text" placeholder="00.000-000" class="form-control" name="cep" onkeypress="$(this).mask('00.000-000')" required>
+     </div>
     
     <div class="mb-3">
         <label>Senha</label>  

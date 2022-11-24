@@ -16,6 +16,7 @@
         print "<th>CPF</th>";
         print "<th>E-mail</th>";
         print "<th>Contato</th>";
+        print "<th>Cep</th>";
         print "<th>Data de Nascimento</th>";
         print "<th>Ações</th>";
         print "</tr>";
@@ -28,6 +29,7 @@
             print "<td>".$row->cpf."</td>";
             print "<td>".$row->email."</td>";
             print "<td>".$row->contato."</td>";
+            print "<td>".$row->cep."</td>";
             print "<td>".$row->data_nasc."</td>";
             print "<td>
 
