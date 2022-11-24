@@ -21,6 +21,12 @@
         <label>E-mail</label>  
         <input type="email" name="email" value="<?php print $row->email; ?>" class="form-control">
     </div>
+
+    <div class="mb-3">
+        <label>Contato</label>  
+        <input type="text"  name="contato" value="<?php print $row->contato; ?>" class="form-control" type="text" class="form-control" onkeypress="$(this).mask('(00) 00000-0009')" required>
+    </div>
+
     <div class="mb-3">
         <label>Senha</label>  
         <input type="password" name="senha" class="form-control" required> 

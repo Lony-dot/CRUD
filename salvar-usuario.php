@@ -7,10 +7,11 @@
         $nome = $_POST["nome"];
             $cpf = $_POST["cpf"];
             $email = $_POST["email"];
+            $contato = $_POST["contato"];
             $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
-            $sql = "INSERT INTO usuarios (nome, cpf, email, senha, data_nasc) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$senha}', '{$data_nasc}')";        
+            $sql = "INSERT INTO usuarios (nome, cpf, email, contato, senha, data_nasc) VALUES ('{$nome}', '{$cpf}', '{$email}', '{$contato}', '{$senha}', '{$data_nasc}')";        
 
             $res = $conn->query($sql);
 
@@ -27,7 +28,8 @@
         case 'editar':
              $nome = $_POST["nome"];
              $cpf = $_POST["cpf"];
-            $email = $_POST["email"];
+            $email = $_POST["contato"];
+            $contato = $_POST["email"];
             $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
@@ -35,6 +37,7 @@
             nome='{$nome}',
             cpf='{$cpf}',
             email='{$email}',
+            contato='{$contato}',
             senha='{$senha}',
             data_nasc='{$data_nasc}'
             WHERE
