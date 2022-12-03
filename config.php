@@ -1,8 +1,27 @@
 <?php
-    define('HOST', 'localhost');
-    define('USER', 'root');
-    define('CPF', '');
-    define('PASS', '');
-    define('BASE', 'cadastro');
 
-    $conn = new MySQLi(HOST,USER,PASS,BASE);
+
+class config {
+
+//host
+private $host = 'localhost';
+
+//usuario
+private $user = 'root';
+
+//senha
+private $pass = '';
+
+//banco
+private $base = 'cadastro';
+
+public function conecta_mysql(){
+
+    //Criar a conexão
+    mysqli_connect($this->host, $this->user, $this->pass, $this->base);
+  }
+
+}
+
+?>
+

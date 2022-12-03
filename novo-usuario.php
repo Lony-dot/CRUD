@@ -1,16 +1,18 @@
 <h1>Novo Usuário</h1>
 
 <form action="?page=salvar" method="POST">
+
         <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3"> 
         <label>Nome</label>
         <input type="text" placeholder="Nome Completo" name="nome" class="form-control" required>
     </div>
+    
     <div class="mb-3"> 
         <label>Nome Mãe</label>
         <input type="text" placeholder="Nome Mãe" name="nome_mae" class="form-control" required>
     </div>
-     
+
     <div class="mb-3"> 
         <label>CPF</label>
         <input type="text" placeholder="000.000.000-00"  minlength="14" maxlength="14" class="form-control" onkeypress="$(this).mask('000.000.000-00');"  required>
@@ -42,7 +44,7 @@
     <div class="mb-3">
     <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
-       
+    
 </form>
 
 
