@@ -61,7 +61,7 @@
 	          <img src="imagens/Pegasus.jpg" />
 	        </div>
 	        
-	        <div id="navbar" class="navbar-collapse collapse">
+	      <!-- <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
 	            <li><a href="inscrevase.php">Inscrever-se</a></li>
 	            <li class="<?= $erro == 1 ? 'open' : '' ?>">
@@ -83,7 +83,7 @@
 
 								<br /><br />
 								
-							</form>
+							</form> -->
 
 
                             <div id="navbar" class="navbar-collapse collapse">
