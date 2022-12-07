@@ -20,7 +20,7 @@ public function conecta_mysql(){
     //Criar a conexão
     $con = mysqli_connect($this->host, $this->user, $this->pass, $this->base);
 
-    //Ajustar o charset de comunicação entyre a aplicação e o banco de dados
+    //Ajustar o charset de comunicação entre a aplicação e o banco de dados
     mysqli_set_charset($con, 'utf8');
 
     //Verificar se houve erro de conexão

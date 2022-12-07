@@ -1,3 +1,5 @@
+
+<!--Esse arquivo salva os campos que serão preenchidos da venda -->
 <?php
    
     switch ($_REQUEST["acao"]) {

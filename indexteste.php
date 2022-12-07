@@ -70,7 +70,7 @@
 						<div class="col-md-12">
 				    		<p>Você possui uma conta?</h3>
 				    		<br />
-							<form method="post" action="salvar-usuario.php" id="formLogin">
+							<form method="post" action="validar_acesso.php" id="formLogin">
 								<div class="form-group">
 									<input type="text" class="form-control" id="campo_usuario" name="usuario" placeholder="Usuário" />
 								</div>
