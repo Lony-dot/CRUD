@@ -1,7 +1,6 @@
 <?php
 
-$erro_usuario   = isset($_GET['erro_usuario'])  ?  $_GET['erro_usuario'] : 0;
-$erro_email     = isset($_GET['erro_email'])    ?  $_GET['erro_email']   : 0;
+    session_start();
 
 ?>
 
@@ -10,7 +9,7 @@ $erro_email     = isset($_GET['erro_email'])    ?  $_GET['erro_email']   : 0;
 	<head>
 		<meta charset="UTF-8">
 
-		<title>Pegasus</title>
+		<title>PEGASUS</title>
 		
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -37,7 +36,7 @@ $erro_email     = isset($_GET['erro_email'])    ?  $_GET['erro_email']   : 0;
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="indexteste.php">Voltar para Home</a></li>
+	            <li><a href="">Sair</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -50,35 +49,11 @@ $erro_email     = isset($_GET['erro_email'])    ?  $_GET['erro_email']   : 0;
 
 	    	<div class="col-md-4"></div>
 	    	<div class="col-md-4">
-			<h3>Inscreva-se já.</h3>
-	    		<br />
-				<form method="post" action="registra-usuario.php" id="formCadastrarse">
-					<div class="form-group">
-						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
-						<?php 
-							if($erro_usuario){
-								echo '<font style="color:#FF0000">Usuário já existe</font>';
-							}
-						?>
-
-					</div>
-
-					<div class="form-group">
-						<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
-						<?php 
-							if($erro_email){
-								echo '<font style="color:#FF0000">E-mail já existe</font>';
-							}
-						?>
-					
-					</div>
-					
-					<div class="form-group">
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
-					</div>
-					
-					<button type="submit" class="btn btn-primary form-control">Inscreva-se</button>
-				</form>
+	    		Usuário autenticado!!!
+                <br />
+                <?= $_SESSION['usuario'] ?> 
+                <br />
+                <?= $_SESSION['email'] ?> 
 			</div>
 			<div class="col-md-4"></div>
 
@@ -87,6 +62,7 @@ $erro_email     = isset($_GET['erro_email'])    ?  $_GET['erro_email']   : 0;
 			<div class="col-md-4"></div>
 			<div class="col-md-4"></div>
 			<div class="col-md-4"></div>
+
 		</div>
 
 
