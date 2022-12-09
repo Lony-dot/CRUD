@@ -1,9 +1,20 @@
+<?php
+
+session_start();
+
+//Eliminando a sessão de usuário e e-mail, dessa forma, redirecionando corretamente para a página sair.
+unset($_SESSION['usuario']);   
+unset($_SESSION['email']);
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 
-		<title>PEGASUS</title>
+		<title>Pegasus</title>
 		
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -15,8 +26,8 @@
 
 	<body>
 
-		<!-- Static navbar -->
-	    <nav class="navbar navbar-default navbar-static-top">
+	<!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -27,49 +38,25 @@
 	          </button>
 	          <img src="imagens/Pegasus.jpg" />
 	        </div>
+
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="indexteste.php">Sair</a></li>
+	            <li><a href="indexteste.php">Voltar para Home</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </nav>
 
 
-
-
-
-	    </div>
-	
+	    
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
 	</body>
-</html>		
+</html>
 
 
-<?php
 
-    require_once('config.php'); //arquivo importado para dentro do script
-
-    $usuario = $_POST['usuario'];
-    echo '<br />';
-    $email = $_POST['email'];
-    echo '<br />';
-    $senha = $_POST['senha'];
-
-    $configdb = new config();
-    $link = $configdb-> conecta_mysql();
-
-    $sql = " insert into usuarios(usuario, email, senha) values ('$usuario', '$email', '$senha') ";
-
-    //Executar a query
-    if(mysqli_query( $link, $sql)){
-        echo 'Usuário registrado com sucesso!';
-    }else {
-        echo 'Erro ao registrar o usuário!';
-    }
-    
-?>
-
-
+<div class="container">  
+    <h2><b>ESPERAMOS VOCÊ DE VOLTA EM BREVE!</b></h2>
+</div>
