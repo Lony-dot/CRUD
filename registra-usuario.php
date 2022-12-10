@@ -27,10 +27,19 @@
 	          </button>
 	          <img src="imagens/Pegasus.jpg" />
 	        </div>
-	        
-	        <div id="navbar" class="navbar-collapse collapse">
+
+			
+			<div class="collapse navbar-collapse justify-content-end">
+  <ul class="nav navbar-nav navbar-right">
+    <li class="nav nav-item right">
+      <a class="nav-link" href="#">Sair</a>
+    </li>
+  </ul>
+		
+
+	         <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="indexteste.php">Sair</a></li>
+	            <li><a href="index.php">Home</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -56,7 +65,7 @@
     echo '<br />';
     $email = $_POST['email'];
     echo '<br />';
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $configdb = new config();
     $link = $configdb-> conecta_mysql();
@@ -65,11 +74,7 @@
 
     //Executar a query
     if(mysqli_query( $link, $sql)){
-        echo 'Usuário registrado com sucesso!';
+        echo   '<h1>Usuário registrado com sucesso!</h1>';
     }else {
         echo 'Erro ao registrar o usuário!';
     }
-    
-?>
-
-

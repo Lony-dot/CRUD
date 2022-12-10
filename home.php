@@ -2,7 +2,7 @@
 
     session_start();
 
-	if(!isset($_SESSION['usuario'])) { //teste do índice usuário nvariável de sessão  existe.
+	if(!isset($_SESSION['usuario'])) { //teste do índice usuário na variável de sessão  existe.
 		header('Location: indexteste.php?erro=1');
 	};
 
