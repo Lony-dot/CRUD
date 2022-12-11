@@ -17,12 +17,14 @@
      
     <title>Cadastro</title>
   </head>
+
+  
   <body>
 
   <nav class="navbar navbar-expand-lg 
-  navbar-light bg-light">
+  navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Cadastro</a>
+            <a class="navbar-brand" href="index.php">Cadastro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,12 +34,18 @@
                 <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="?page=novo">Novo Usuário</a>
+                <a class="nav-link" href="?page=novo">Cadastrar venda</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="?page=listar">Listar usuários</a>
+                <a class="nav-link" href="?page=listar">Listar usuários</a> 
+                </li>   
+                <li class="nav-item">
+                <a class="nav-link"  href="indexteste.php">Sair</a>  
+                
             </ul>
-            </div>
+
+
+           
         </div>
     </nav>
 
