@@ -4,6 +4,7 @@
    
     switch ($_REQUEST["acao"]) {
 
+         
         case 'cadastrar':
 
         $nome = $_POST["nome"];
@@ -12,12 +13,12 @@
             $email = $_POST["email"];
             $contato = $_POST["contato"];
             $cep = $_POST["cep"];
-            $senha = md5($_POST["senha"]);
+          //  $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
-            $sql = "INSERT INTO usuarios (nome, nome_mae, cpf, email, contato, cep, senha, data_nasc) VALUES ('{$nome}', '{$nome_mae}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$senha}', '{$data_nasc}')";        
+            $sql = "INSERT INTO clientes (nome, nome_mae, cpf, email, contato, cep,  data_nasc) VALUES ('{$nome}', '{$nome_mae}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$data_nasc}')";        
 
-            $res = $conn->query($sql);
+            $res = $con->query($sql);
 
             if($res == true){   
                 print "<script>alert('Cadastro realizado com sucesso!');</script>";
@@ -36,22 +37,22 @@
             $email = $_POST["contato"];
             $contato = $_POST["email"];
             $cep = $_POST["cep"];
-            $senha = md5($_POST["senha"]);
+          //  $senha = md5($_POST["senha"]);
             $data_nasc = $_POST["data_nasc"];
 
-            $sql = "UPDATE usuarios SET 
+            $sql = "UPDATE clientes SET 
             nome='{$nome}',
             nome_mae='{$nome_mae}',
             cpf='{$cpf}',
             email='{$email}',
             contato='{$contato}',
             cep='{$cep}',
-            senha='{$senha}',
+           <!-- senha='{$senha}', -->
             data_nasc='{$data_nasc}'
             WHERE
             id=".$_REQUEST["id"];
 
-            $res = $conn->query($sql);
+            $res = $con->query($sql);
 
             if($res == true){   
                 print "<script>alert('Editado com sucesso!');</script>";
@@ -64,9 +65,9 @@
             break;
         
         case 'excluir':
-            $sql = "DELETE FROM usuarios WHERE id=".$_REQUEST["id"];
+            $sql = "DELETE FROM clientes WHERE id=".$_REQUEST["id"];
 
-            $res = $conn->query($sql);
+            $res = $con->query($sql);
 
             if($res == true){   
                 print "<script>alert('Excluído com sucesso!');</script>";
@@ -80,4 +81,3 @@
     }
 
   
-

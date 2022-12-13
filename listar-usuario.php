@@ -1,6 +1,6 @@
 <h1>Listar Usuários</h1>
 <?php
-    $sql = "SELECT * FROM usuarios";
+    $sql = "SELECT * FROM clientes";
 
     $res = $con->query($sql);
 
