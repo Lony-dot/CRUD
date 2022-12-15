@@ -10,9 +10,12 @@ require_once('config.php'); //TESTE SEGUINTE, IGNORE POR ENQUANTO
 
     switch ($_POST["acao"]) {
         
-       
+        
 
         case 'cadastrar':
+            
+            // echo 'cheguei aqui';
+            // exit;
             
         $nome = $_POST["nome"];
         $nome_mae = $_POST["nome_mae"];
@@ -27,10 +30,20 @@ require_once('config.php'); //TESTE SEGUINTE, IGNORE POR ENQUANTO
             
 
             $sql = "INSERT INTO clientes (nome, nome_mae, cpf, email, contato, cep,  data_nasc) VALUES ( '{$nome}', '{$nome_mae}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$data_nasc}')";        
+                
+            //instância da classe de conexão
+            $configdb = new config();
+            $link = $configdb->conecta_mysql(); //Método
+            $response = $link->query($sql);
+            // $name = $configdb->nome; //Atributo
+            // $nome = $configdb->retornaNome();
+            // echo $nome;
+            // exit;
+         
 
-            $res = $con->query($sql);
 
-            if($res == true){   
+
+            if($response == true){   
                 print "<script>alert('Cadastro realizado com sucesso!');</script>";
                 print "<script>location.href='?page=listar';</script>"; //redireciona para listar.
             } else{
@@ -63,11 +76,11 @@ require_once('config.php'); //TESTE SEGUINTE, IGNORE POR ENQUANTO
             WHERE
             id=".$_REQUEST["id"];
 
-            $res = $con->query($sql);
-
+            $response = $con->query($sql);
+             
             
 
-            if($res == true){   
+            if($response == true){   
                 print "<script>alert('Editado com sucesso!');</script>";
                 print "<script>location.href='?page=listar';</script>"; //redireciona para listar.
             } else{
@@ -80,9 +93,10 @@ require_once('config.php'); //TESTE SEGUINTE, IGNORE POR ENQUANTO
         case 'excluir':
             $sql = "DELETE FROM clientes WHERE id=".$_REQUEST["id"];
 
-            $res = $con->query($sql);
+            $response = $con->query($sql);
+           
 
-            if($res == true){   
+            if($response == true){   
                 print "<script>alert('Excluído com sucesso!');</script>";
                 print "<script>location.href='?page=listar';</script>"; //redirecionar
             } else{
@@ -92,8 +106,7 @@ require_once('config.php'); //TESTE SEGUINTE, IGNORE POR ENQUANTO
             break;
 
 
-            var_dump($_POST["acao"]);
-            exit; 
+            
             
     }
 

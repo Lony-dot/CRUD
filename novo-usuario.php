@@ -1,6 +1,6 @@
 <h1>Novo Usuário</h1>
 
-<form action="?page=salvar"  method="POST">
+<form action="salvar-usuario.php"  method="POST">
 
         <input type="hidden" name="acao"  value="cadastrar">
         
