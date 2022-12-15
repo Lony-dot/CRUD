@@ -2,11 +2,18 @@
 <!--Esse arquivo salva os campos que serão preenchidos da venda -->
 <?php
    
-    switch ($_REQUEST["acao"]) {
+   
 
-         
+require_once('config.php'); //TESTE SEGUINTE, IGNORE POR ENQUANTO
+
+
+
+    switch ($_POST["acao"]) {
+        
+       
+
         case 'cadastrar':
-
+            
         $nome = $_POST["nome"];
         $nome_mae = $_POST["nome_mae"];
             $cpf = $_POST["cpf"];
@@ -14,9 +21,12 @@
             $contato = $_POST["contato"];
             $cep = $_POST["cep"];
           //  $senha = md5($_POST["senha"]);
-            $data_nasc = $_POST["data_nasc"];
+            $data_nasc = $_POST["data_nasc"]; 
 
-            $sql = "INSERT INTO clientes (nome, nome_mae, cpf, email, contato, cep,  data_nasc) VALUES ('{$nome}', '{$nome_mae}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$data_nasc}')";        
+            
+            
+
+            $sql = "INSERT INTO clientes (nome, nome_mae, cpf, email, contato, cep,  data_nasc) VALUES ( '{$nome}', '{$nome_mae}', '{$cpf}', '{$email}', '{$contato}', '{$cep}', '{$data_nasc}')";        
 
             $res = $con->query($sql);
 
@@ -29,6 +39,7 @@
             }
 
             break;
+           
         
         case 'editar':
              $nome = $_POST["nome"];
@@ -54,6 +65,8 @@
 
             $res = $con->query($sql);
 
+            
+
             if($res == true){   
                 print "<script>alert('Editado com sucesso!');</script>";
                 print "<script>location.href='?page=listar';</script>"; //redireciona para listar.
@@ -77,7 +90,14 @@
                 print "<script>location.href='?page=listar';</script>"; //caso dê errado, redireciona para a página listar
             }
             break;
+
+
+            var_dump($_POST["acao"]);
+            exit; 
             
     }
 
-  
+ 
+    
+    
+    

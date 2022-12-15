@@ -1,8 +1,9 @@
 <h1>Novo Usuário</h1>
 
-<form action="?page=salvar" method="POST">
+<form action="?page=salvar"  method="POST">
 
-        <input type="hidden" name="acao" value="acao"> <!-- O valor de acao é enviado diretamente para salvar-usuario.php -->
+        <input type="hidden" name="acao"  value="cadastrar">
+        
     <div class="mb-3"> 
         <label>Nome</label>
         <input type="text" placeholder="Nome Completo" name="nome" class="form-control" required>

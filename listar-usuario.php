@@ -1,8 +1,11 @@
 <h1>Listar Usuários</h1>
 <?php
+
+
+
     $sql = "SELECT * FROM clientes";
 
-    $res = $con->query($sql);
+    $res =  $con->query($sql);
 
     $qtd = $res->num_rows;
 
